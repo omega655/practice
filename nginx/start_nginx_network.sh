@@ -1,0 +1,1 @@
+docker run -d --net=web --ip 172.19.0.$1 --name=nginx-$1 --hostname=nginx-$1   -p 172.19.0.$1:8090:8090 -p 172.19.0.$1:8080:80       -v $PWD/nginx_status.conf:/etc/nginx/conf.d/nginx_status.conf:ro       nginx
